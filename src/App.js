@@ -1,8 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import NodeList from "./List/NoteList";
+import Counters from "./counters/Counters";
 
 class App extends Component {
+  style = {
+    float: "left"
+  };
   render() {
     return (
       <div className="App">
@@ -20,6 +25,8 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <NodeList style={this.style} />
+        <Counters style={this.style} />
       </div>
     );
   }
